@@ -1,0 +1,25 @@
+// COLORS
+$color-text: #212529;
+$color-text-secondary: #6C757D;
+$color-border: #E0E0E0;
+$color-background: #FDFDFD;
+$color-black: #000;
+$color-blue: #0D6EFD;
+$color-white: #fff; 
+$color-red: #DC3545;
+
+// FONTS
+$font-montserrat: "Montserrat", sans-serif;
+
+// EASING TRANSITIONS
+$duration-normal: 0.4s;
+$duration-fast: calc($duration-normal / 2);
+$easing-back-out: cubic-bezier(0.25, 0.74, 0.22, 1.1); // http://cubic-bezier.com/#.25,.74,.22,1.1
+$easing-back-in: cubic-bezier(0.47, -0.1, 0.5, -0.06); // http://cubic-bezier.com/#.47,-0.1,.5,-.06
+$easing-in-out: ease-in-out;
+$easing-out: ease-out;
+$easing-in: ease-in;
+
+// URL
+$url-font: "../assets/fonts/";
+$url-image: "../assets/images/";

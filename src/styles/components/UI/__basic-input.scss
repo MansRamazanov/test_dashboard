@@ -1,0 +1,29 @@
+@use '../../functions' as *;
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.basic-input {
+	$p: &;
+
+	&__label {
+		font-size: vc(16);
+        line-height: 1.4;
+		font-weight: 600;
+	}
+
+	&__input {
+        width: 100%;
+		font-size: vc(14);
+		font-weight: 400;
+        margin-top: 14px;
+        padding: vc(16) vc(24);
+        border: 1.5px solid $color-border;
+        border-radius: 8px;
+        outline: none;
+        transition: border-color $duration-normal $easing-in-out;
+
+        &:focus {
+            border-color: $color-blue;
+        }
+	}
+}

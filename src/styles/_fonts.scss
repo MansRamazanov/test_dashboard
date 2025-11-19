@@ -1,0 +1,7 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+//Montserrat
+@include font-face($url-font + "Montserrat/Montserrat-400", "Montserrat", 400, normal);
+@include font-face($url-font + "Montserrat/Montserrat-600", "Montserrat", 600, normal);
+@include font-face($url-font + "Montserrat/Montserrat-700", "Montserrat", 700, normal);

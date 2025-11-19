@@ -1,0 +1,40 @@
+@use '../../functions' as *;
+@use '../../variables' as *;
+@use '../../mixins' as *;
+
+.basic-button {
+	$p: &;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    min-width: vc(115);
+    padding: vc(7) vc(25);
+    border-radius: 8px;
+    font-size: vc(14);
+    font-weight: 400;
+    line-height: 1.4;
+    color: $color-text;
+    cursor: pointer;
+    transition: all $duration-normal $easing-in-out;
+
+    &__accept {
+        border: 1px solid $color-blue;
+        color: $color-blue;
+    }
+
+    &__reject {
+        border: 1px solid $color-red;
+        color: $color-red;
+    }
+
+    &:hover {
+        scale: 1.01;
+        opacity: 0.8;
+        transition: scale $duration-normal $easing-in-out;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}

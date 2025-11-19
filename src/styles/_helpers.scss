@@ -1,0 +1,26 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.is-hidden {
+	// stylelint-disable-next-line declaration-no-important
+	display: none !important;
+}
+
+.is-hide {
+	// stylelint-disable-next-line declaration-no-important
+	opacity: 0;
+}
+
+.for-desktop {
+	@include mobile {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.for-mobile {
+	@include desktop {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}

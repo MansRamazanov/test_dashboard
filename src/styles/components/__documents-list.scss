@@ -1,0 +1,32 @@
+@use '../functions' as *;
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.documents-list {
+	$p: &;
+	padding: vc(27) vc(20);
+
+	&__search {
+		margin-bottom: vc(29);
+	}
+
+	&__items-title {
+		font-size: vc(16);
+		font-weight: 600;
+		line-height: 1.4;
+		margin-bottom: vc(17);
+	}
+
+	&__items-list {
+		display: flex;
+		flex-direction: column;
+		gap: vc(18);
+	}
+
+	&__items-list-empty {
+		font-size: vc(14);
+		font-weight: 400;
+		line-height: 1.4;
+		color: $color-text-secondary;
+	}
+}
