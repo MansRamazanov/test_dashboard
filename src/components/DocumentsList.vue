@@ -11,7 +11,14 @@
                 <div v-if="isLoading">Загрузка...</div>
                 <div v-else-if="errorMessage" class="documents-list__error">{{ errorMessage }}</div>
                 <template v-else>
-                    <ListItem v-for="item in docs" :key="item.id" :name="item.name" size="2 MB" @click="activateDocument(item.id)" />
+                    <ListItem
+                        v-for="item in docs"
+                        :key="item.id"
+                        :name="item.name"
+                        size="2 MB"
+                        :active="item.id === activeId"
+                        @click="activateDocument(item.id)"
+                    />
                     <div v-if="!docs.length" class="documents-list__items-list-empty">Ничего не найдено</div>
                 </template>
             </div>
@@ -37,6 +44,7 @@ const docs = computed(() => store.documents)
 const isLoading = computed(() => store.isLoading)
 const errorMessage = computed(() => store.errorMessage)
 const hasQuery = computed(() => searchValue.value.trim().length > 0)
+const activeId = computed(() => store.selectedDocumentId)
 
 const runSearch = debounce((value: string) => {
     store.searchDocs(value)

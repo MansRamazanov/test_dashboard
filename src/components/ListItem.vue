@@ -1,5 +1,5 @@
 <template>
-    <div class="list-item">
+    <div :class="['list-item', { 'is-active': active }]">
         <div class="list-item__img">
             <img src="@/assets/images/item_img.png" alt="document">
         </div>
@@ -18,6 +18,7 @@
 interface Props {
     name: string
     size: string
+    active?: boolean
 }
 defineProps<Props>()
 </script>

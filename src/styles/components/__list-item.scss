@@ -50,4 +50,16 @@
 		line-height: 1.4;
 		color: $color-text-secondary;
 	}
+
+	&.is-active {
+		#{$p}__content {
+			background-color: $color-blue;
+		}
+		#{$p}__content-title {
+			color: #F8F9FA;
+		}
+		#{$p}__content-size {
+			color: #DEE2E6;
+		}
+	}
 }
